@@ -32,7 +32,9 @@ namespace BasicBilling.API
 
             services.AddControllers();
 
-            services.AddEntityFrameworkSqlite().AddDbContext<BillingDbContext>();
+            services.AddDbContext<BillingDbContext>(options => 
+            options.UseSqlite("Data Source=Billing.db"));
+            //AddEntityFrameworkSqlite()
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
