@@ -14,7 +14,7 @@ namespace BasicBilling.API.Data
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Bill> Bills { get; set; }
         
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite("Data Source=Billing.db");
+        // protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //     => options.UseSqlite("Data Source=Billing.db");
     }   
 }
